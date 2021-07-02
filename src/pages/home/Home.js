@@ -13,6 +13,7 @@ const Home = () => {
   const { user } = useAuth();
   const [loading, setLoading] = useState(true);
   const history = useHistory();
+  console.log(user);
 
   useEffect(() => {
     if (!user) history.push('/');
