@@ -1,17 +1,22 @@
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { useState } from 'react';
-import { auth } from './firebase';
-import Home from './pages/home/Home';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Login from './pages/login/Login';
+import Home from './pages/home/Home';
+import { AuthContextProvider } from './context/AuthContext';
 
 const App = () => {
-  const [user] = useAuthState(auth);
-  const [chat, setChat] = useState(undefined);
-
   return (
-    <>
-      {user ? <Home chat={chat} /> : <Login />}
-    </>
+    <Router>
+      <AuthContextProvider>
+        <Switch>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/">
+            <Login />
+          </Route>
+        </Switch>
+      </AuthContextProvider>
+    </Router>
   );
 };
 

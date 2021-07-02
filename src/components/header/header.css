@@ -1,0 +1,28 @@
+.header {
+  background-color: #132d53;
+  display: flex;
+  height: 65px;
+  width: 100vw;
+  z-index: 999;
+  align-items: center;
+}
+
+#logoutIcon {
+  position: absolute;
+  color: rgb(245, 245, 245);
+  font-size: 35px;
+  margin-left: 1%;
+  cursor: pointer;
+}
+
+#logoutIcon:hover {
+  filter: brightness(75%);
+}
+
+#logo {
+  position: absolute;
+  color: rgb(245, 245, 245);
+  font-size: 35px;
+  font-weight: 600;
+  margin-left: 43%;
+}
