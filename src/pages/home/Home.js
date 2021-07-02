@@ -26,7 +26,7 @@ const Home = () => {
         .then(() => setLoading(false))
         .catch(() => {
           const formData = new FormData();
-          createUser(user)
+          createUser(user, formData)
             .then(avatar => { 
               setUser(avatar, formData)
               .then(() => setLoading(false))
