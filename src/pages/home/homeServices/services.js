@@ -19,7 +19,7 @@ export const getUser = async user => {
 
 export const createUser = async (user, formData) => {
     formData.append('email', user.email);
-    formData.append('username', user.displayName);
+    formData.append('username', user.email);
     formData.append('secret', user.uid);
 
     return await getFile(user.photoURL);
