@@ -1,5 +1,5 @@
 import './home.css';
-import Header from './../../components/header/Header';
+import Header from '../../components/Header';
 import { ChatEngine } from 'react-chat-engine';
 import config from './../../utils/config';
 import logger from './../../utils/logger';
@@ -7,7 +7,7 @@ import Loading from './../loading/Loading';
 import { useAuth } from './../../context/AuthContext';
 import { useState, useEffect, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
-import { getUser, createUser, setUser } from './homeServices/services';
+import { getUser, createUser, setUser } from './services';
 
 const Home = () => {
   const { user } = useAuth();
